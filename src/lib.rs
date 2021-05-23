@@ -73,6 +73,8 @@ use anyhow::{Context, Result};
 use redis::{Commands, Connection};
 
 pub mod consumer;
+#[cfg(feature = "tocs")]
+pub mod time_ordered_consumers;
 pub mod types;
 
 /// Produces a new message into a Redis stream.
